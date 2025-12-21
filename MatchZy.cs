@@ -263,6 +263,12 @@ namespace MatchZy
                 return HookResult.Continue;
             });
 
+            // Adicione isto para garantir que o modo espectador funcione para todos
+            AddCommandListener("spec_mode", (player, info) =>
+            {
+                return HookResult.Continue;
+            });
+
             AddCommandListener("noclip", OnConsoleNoClip); // Override noclip
 
             RegisterEventHandler<EventRoundEnd>((@event, info) => 
