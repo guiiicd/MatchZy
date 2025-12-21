@@ -243,9 +243,9 @@ namespace MatchZy
                     return HookResult.Continue;
                 }
 
-                CsTeam playerTeam = GetPlayerTeam(player);
+                // CsTeam playerTeam = GetPlayerTeam(player);
 
-                SwitchPlayerTeam(player, playerTeam);
+                // SwitchPlayerTeam(player, playerTeam);
 
                 return HookResult.Continue;
             });
@@ -256,7 +256,7 @@ namespace MatchZy
                     if (int.TryParse(info.ArgByIndex(1), out int joiningTeam)) {
                         int playerTeam = (int)GetPlayerTeam(player);
                         if (joiningTeam != playerTeam) {
-                            return HookResult.Stop;
+                            // return HookResult.Stop;
                         }
                     }
                 }

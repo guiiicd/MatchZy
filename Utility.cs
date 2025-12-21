@@ -512,11 +512,11 @@ namespace MatchZy
                     if (isMatchSetup || matchModeOnly)
                     {
                         CsTeam team = GetPlayerTeam(player);
-                        // if (team == CsTeam.None && player.UserId.HasValue)
-                        // {
-                        //     Server.ExecuteCommand($"kickid {(ushort)player.UserId}");
-                        //     continue;
-                        // }
+                        if (team == CsTeam.None && player.UserId.HasValue)
+                        {
+                            // Server.ExecuteCommand($"kickid {(ushort)player.UserId}");
+                            continue;
+                        }
                     }
 
                     // A player controller still exists after a player disconnects
