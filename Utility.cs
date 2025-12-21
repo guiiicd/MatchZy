@@ -515,7 +515,7 @@ namespace MatchZy
                         if (team == CsTeam.None && player.UserId.HasValue)
                         {
                             // Server.ExecuteCommand($"kickid {(ushort)player.UserId}");
-                            continue;
+                            // continue;
                         }
                     }
 

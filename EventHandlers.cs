@@ -26,7 +26,15 @@ public partial class MatchZy
                 if (isMatchSetup || matchModeOnly)
                 {
                     CsTeam team = GetPlayerTeam(player);
-                    if (team != CsTeam.None)
+                    if (team == CsTeam.None)
+                    {
+                        Log($"[EventPlayerConnectFull] Player {player.PlayerName} (SteamID: {steamId}) connected but is not in the match config. Allowing connection.");
+                        // Log($"[EventPlayerConnectFull] KICKING PLAYER STEAMID: {steamId}, Name: {player.PlayerName} (NOT ALLOWED!)");
+                        // PrintToAllChat($"Kicking player {player.PlayerName} - Not a player in this game.");
+                        // KickPlayer(player);
+                        return HookResult.Continue;
+                    }
+                    else
                     {
                         SwitchPlayerTeam(player, team);
                     }
