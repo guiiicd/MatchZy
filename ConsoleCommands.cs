@@ -120,6 +120,7 @@ namespace MatchZy
         }
 
         [ConsoleCommand("css_stay", "Stays after knife round")]
+        [ConsoleCommand("css_ficar", "Stays after knife round")]
         public void OnTeamStay(CCSPlayerController? player, CommandInfo? command)
         {
             if (player == null || !isSideSelectionPhase) return;
@@ -134,6 +135,7 @@ namespace MatchZy
         }
 
         [ConsoleCommand("css_switch", "Switch after knife round")]
+        [ConsoleCommand("css_trocar", "Switch after knife round")]
         [ConsoleCommand("css_swap", "Switch after knife round")]
         public void OnTeamSwitch(CCSPlayerController? player, CommandInfo? command)
         {
