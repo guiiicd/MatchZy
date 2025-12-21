@@ -232,34 +232,34 @@ namespace MatchZy
 
             RegisterEventHandler<EventPlayerTeam>((@event, info) =>
             {
-                if (!isMatchSetup && !isVeto) return HookResult.Continue;
+                // if (!isMatchSetup && !isVeto) return HookResult.Continue;
 
-                CCSPlayerController? player = @event.Userid;
+                // CCSPlayerController? player = @event.Userid;
 
-                if (!IsPlayerValid(player)) return HookResult.Continue;
+                // if (!IsPlayerValid(player)) return HookResult.Continue;
 
-                if (player!.IsHLTV || player.IsBot)
-                {
-                    return HookResult.Continue;
-                }
+                // if (player!.IsHLTV || player.IsBot)
+                // {
+                //     return HookResult.Continue;
+                // }
 
-                // CsTeam playerTeam = GetPlayerTeam(player);
+                // // CsTeam playerTeam = GetPlayerTeam(player);
 
-                // SwitchPlayerTeam(player, playerTeam);
+                // // SwitchPlayerTeam(player, playerTeam);
 
                 return HookResult.Continue;
             });
 
             AddCommandListener("jointeam", (player, info) =>
             {
-                if ((isMatchSetup || isVeto) && player != null && player.IsValid) {
-                    if (int.TryParse(info.ArgByIndex(1), out int joiningTeam)) {
-                        int playerTeam = (int)GetPlayerTeam(player);
-                        if (joiningTeam != playerTeam) {
-                            // return HookResult.Stop;
-                        }
-                    }
-                }
+                // if ((isMatchSetup || isVeto) && player != null && player.IsValid) {
+                //     if (int.TryParse(info.ArgByIndex(1), out int joiningTeam)) {
+                //         int playerTeam = (int)GetPlayerTeam(player);
+                //         if (joiningTeam != playerTeam) {
+                //             // return HookResult.Stop;
+                //         }
+                //     }
+                // }
                 return HookResult.Continue;
             });
 
